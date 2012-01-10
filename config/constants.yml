@@ -1,0 +1,26 @@
+# Enter your per-environment constants below
+
+development: &default
+  cms:
+    styles:
+      omega-text: "sites/all/themes/omega/omega/css/omega-text.css"
+      formalize: "sites/all/themes/omega/omega/css/formalize.css"
+      omega-branding: "sites/all/themes/omega/omega/css/omega-branding.css"
+      omega-forms: "sites/all/themes/omega/omega/css/omega-forms.css"
+      omega-menu: "sites/all/themes/omega/omega/css/omega-menu.css"
+      omega-visuals: "sites/all/themes/omega/omega/css/omega-visuals.css"
+    js:
+      jquery: "misc/jquery.js"
+      jquery-once: "misc/jquery.once.js"
+      drupal: "misc/drupal.js"
+      contextual: "modules/contextual/contextual.js"
+      jquery-formalize: "sites/all/themes/omega/omega/js/jquery.formalize.js"
+      omega-mediaqueries: "sites/all/themes/omega/omega/js/omega-mediaqueries.js"
+      alpha-debug: "sites/all/themes/omega/alpha/js/alpha-debug.js"
+
+
+production:
+  <<: *default
+
+test:
+  <<: *default

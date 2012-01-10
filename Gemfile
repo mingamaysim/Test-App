@@ -10,7 +10,8 @@ gem 'mysql2', '0.2.6'
 gem "paperclip", "~> 2.4.5"  #for attachment
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
+gem "app_constants", '1.0.3'
 
 # Deploy with Capistrano
 # gem 'capistrano'
