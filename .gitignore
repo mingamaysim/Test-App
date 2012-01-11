@@ -4,7 +4,7 @@ db/schema.rb
 log/*.log
 tmp/**/*
 nbproject/
-config/database.yml
+config/database.*
 **/*~
 *~
 Gemfile.lock
@@ -16,3 +16,4 @@ config/deploy.rb
 public/assets/
 public/css/
 .idea/
+.rvmrc
