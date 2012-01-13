@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
+    CmsMessage.load('1')
     @posts = Post.all
 
     respond_to do |format|

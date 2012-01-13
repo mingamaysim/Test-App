@@ -17,10 +17,10 @@ preload_app true
 timeout 60
 
 # Listen on a Unix data socket
-listen APP_PATH + "/sockets/unicorn.sock", :backlog => 2048
+listen APP_PATH + "/tmp/sockets/unicorn.sock", :backlog => 2048
 
 # PID File
-pid APP_PATH + "/pids/unicorn.pid"
+pid APP_PATH + "/tmp/pids/unicorn.pid"
 
 if rails_env != 'development'
 	stderr_path APP_PATH + "log/unicorn.log"
@@ -77,7 +77,7 @@ after_fork do |server, worker|
 
 	begin
 		uid, gid = Process.euid, Process.egid
-		user, group = 'deploy', 'deploy'
+		user, group = 'www-data', 'www-data'
 		target_uid = Etc.getpwnam(user).uid
 		target_gid = Etc.getgrnam(group).gid
 		worker.tmp.chown(target_uid, target_gid)

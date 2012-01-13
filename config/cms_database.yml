@@ -1,0 +1,13 @@
+development:
+  adapter: mysql2
+  host: amasydev1
+  database: amaysim-cms-dev
+  username: amaysim
+  password: passw0rd
+
+production:
+  adapter: mysql2
+  host: amasydev1
+  database: amaysim-cms-dev
+  username: amaysim
+  password: passw0rd
