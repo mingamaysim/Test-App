@@ -17,3 +17,4 @@ public/assets/
 public/css/
 .idea/
 .rvmrc
+config/unicorn.*
