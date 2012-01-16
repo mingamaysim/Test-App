@@ -1,3 +1,14 @@
+<h2>CMS Images from Drupal</h2>
+<div>Image tag from CMS: <%=cms_image_tag 'test_logo'%></div>
+<div>Image URL from CMS: <%=cms_image_url 'test_logo'%></div>
+
+<h2>CMS Messages from Drupal</h2>
+<div><b>SIM message #2:</b> <%=@sim_msg2%></div>
+<div><b>SIM message #4:</b> <%=@sim_msg4%></div>
+<div><b>Alert message #21:</b> <%=@alert_msg21%></div>
+<div><b>Thank you message #14167:</b> <%=@thank_you_msg14167%></div>
+<div><%=link_to_cms('Go to CMS MC Test Page', :mc_test_page)%></div>
+
 <h1>Listing posts</h1>
 
 <table>
