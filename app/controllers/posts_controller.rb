@@ -1,4 +1,10 @@
 class PostsController < ApplicationController
+  layout 'cms'
+
+  def test_layout
+    render :layout => 'cms'
+  end
+
   # GET /posts
   # GET /posts.xml
   def index

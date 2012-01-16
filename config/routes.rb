@@ -1,7 +1,12 @@
 Testapp::Application.routes.draw do
 
   scope "/my-account" do
-   resources :posts
+   #resources :posts
+   resources :posts do
+     collection do
+       get :test_layout
+     end
+   end
   end
 
 
