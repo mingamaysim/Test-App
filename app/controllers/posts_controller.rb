@@ -2,7 +2,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-    CmsMessage.load('1')
+    @sim_msg2 = CmsMessage.load(2, CmsMessage::TYPE_SIM)
+    @sim_msg4 = CmsMessage.load(4, CmsMessage::TYPE_SIM)
+    @thank_you_msg14167 = CmsMessage.load(14167, CmsMessage::TYPE_THANK_YOU)
+    @alert_msg21 = CmsMessage.load(21, CmsMessage::TYPE_ALERT)
+
     @posts = Post.all
 
     respond_to do |format|
